@@ -1,0 +1,296 @@
+
+body {
+  font: 1em Verdana, Helvetica, san-serif;
+}
+h1 {
+  margin: 0;
+  padding: 0;
+  font-family:Georgia, serif;
+  font-size: 1.4em;
+  color: rgb(56, 133, 147);
+}
+.hangmanParagraph {
+  margin: 0.2em;
+  padding: 0;
+}
+.wrapper{
+  width: 330px;
+  border: 2px solid rgb(110, 109, 107);
+  padding: 0.2em;/*!width & padding together*/
+  background-color: #e3e1e1;
+}
+.main-content {/* main.main-content */
+  display: flex;
+  /* border: 1px solid black; */
+}
+.leftColumn {
+  flex: 1 1 auto;
+  padding:0;
+  margin: 0;
+}
+.rightColumn{/* aside.rightColumn */
+  flex: 0 0 75px;
+  display: flex;
+  flex-flow: column;
+  justify-content:flex-end;
+  background-color: rgb(103, 102, 101);
+  /* border: 1px solid red; */
+  padding:0;
+  margin:0 0 0.25em 0;
+}
+/* #guessSubmitButton{
+  align-self: flex-end;
+} */
+/* .resultParas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+/*************
+ start keyPad grid css
+**************/
+.keyPad {
+  display: grid;
+  /* grid-template-colums: 16% 16% 16% 16% 16% 16%; */
+  grid-template-columns: 16% 16% 16% 16% 16% 16%;
+  grid-template-rows:  44px 44px;
+  grid-row-gap: 4px;
+  grid-column-gap: 1px;
+  padding: 0.5em 0;
+  /* border: 1px solid red; */
+}
+.keyPadButton {
+  width:42px;
+  height:42px;
+  font-size: 1.2em;
+  background-color: rgb(101, 102, 100);
+  display: block;
+  /* margin: 1px; */
+  border: 1px solid #000;
+  border-radius: 30px;
+  display: flex;
+  align-items:center;/*vertical*/
+  justify-content: center;/*horizontal*/
+
+}
+.keyPadButton:hover {
+  background-color: #fff;
+}
+.keyPadButton:hover a{
+
+  color: #000;
+}
+.keyPadButton a {
+    text-decoration: none;
+      color: #fff;
+}
+
+.resultParas p{
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0.5em;
+    color: white;
+    border-bottom: 1px solid  black;
+}
+.lastResult {
+
+}
+.lowOrHi {
+  /* background-color: rgb(2, 120, 157); */
+
+}
+/*************
+ stop keyPad grid css
+**************/
+.boxPlus {
+  /* padding: 0.5em; */
+  border: 1px solid rgb(88, 86, 88);
+  border-radius: 6px;
+  background-color: rgb(165, 167, 167);
+  /* background: linear-gradient(to bottom, #b5bdc8 0%,#828c95 36%,#28343b 100%);  */
+  /*background: linear-gradient(to bottom, #fceabb 0%,#fccd4d 50%,#f8b500 51%,#fbdf93 100%);*/
+background: linear-gradient(to bottom, #f9c667 0%,#f77604 100%);
+  padding-bottom: 2px;
+
+}
+.boxMinus{
+  /* padding: 0.5em; */
+  border: 1px solid rgb(88, 86, 88);
+  border-radius: 6px;
+  background-color: rgb(165, 167, 167);
+  background: linear-gradient(to bottom, #f9c667 0%,#f77604 100%);
+  padding-bottom: 2px;
+
+}
+.boxHide {
+  display:none;
+}
+ul.helpMenu ul.leveltwo{
+  border: 1px solid rgb(50, 50, 51);
+}
+ul.helpMenu, ul.helpMenu ul.leveltwo {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(226, 226, 222);
+}
+ul.helpMenu {
+  margin-bottom: 0.5em;
+}
+ul.helpMenu li.dropmenu {
+  /* display: inline-block; */
+  margin: 0;
+
+  position: relative;
+  background-color: rgb(226, 226, 222);
+
+}
+/* .helpMenu li:hover {
+  background-color: rgb(176, 171, 174);
+} */
+.helpMenu li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0.2em;
+  padding-bottom: 0.3em;
+}
+ul.helpMenu ul.leveltwo {
+  position: absolute;
+  padding: 0.5em;
+}
+ul.helpMenu ul.leveltwo.fold{
+  display: none;
+}
+ul.leveltwo li {
+  border: 1px solid white;
+  padding: 0.3em;
+}
+
+/*mobile doesn't have a hover,
+only works on computer
+ul.helpMenu li.dropmenu:hover ul.leveltwo {
+  display: block;
+} */
+/* .lastResult {
+  color: white;
+  padding: 3px;
+  width: 100%;
+  max-width: 400px;
+} */
+#guessSubmitButton{
+  border: 1px solid black;
+  background-color: rgb(2, 120, 157);
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0.1em;
+}
+
+#guessSubmitButton:hover {
+  background-color: #000;
+  border: 1px solid #f00;
+}
+#guessSubmitButton{
+  text-decoration: none;
+  display: block;
+  color: #fff;
+}
+.playAgain {
+  border: 1px solid black;
+  background-color: rgb(2, 120, 157);
+  padding: 0.5em;
+  text-align: center;
+  border-radius: 15px;
+  margin: 0.1em;
+  color: #fff;
+}
+.playAgain:hover {
+  background-color: #000;
+  border: 1px solid #f00;
+}
+.guessField {
+  margin: 0;
+  height: 32px;
+  width: 40px;
+  background-color: rgb(223, 140, 54);
+  color: #fff;
+    padding: 0.3em;
+     font-size: 24px;
+    border: 1px solid black;
+    border-color: rgb(91, 89, 90) rgb(228, 228, 224)  rgb(228, 228, 224) rgb(91, 89, 90);
+}
+button {
+  padding: 1em;
+}
+#base1 {
+  visibility: hidden;
+}
+#base2 {
+  visibility: hidden;
+}
+#base3 {
+  visibility: hidden;
+}
+#base4 {
+  visibility: hidden;
+}
+#base5 {
+  visibility: hidden;
+}
+#base6 {
+  visibility: hidden;
+}
+#base7 {
+  visibility: hidden;
+}
+#base8 {
+  visibility: hidden;
+}
+#base9 {
+  visibility: hidden;
+}
+#base10 {
+  visibility: hidden;
+}
+
+/*********
+begin svg rules
+***********/
+#hangman {/*can't say svg#hangman*/
+
+  background-color: #fff;
+}
+#skyBlue {
+  visibility: hidden;
+}
+
+#happy {
+   visibility: hidden;
+}
+
+.manBounce {
+  animation: shimmy 1s infinite;
+  animation-direction: alternate;
+}
+@keyframes shimmy {
+  0% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(0px, 17px);/*first value is x, second is y*/
+  }
+}
+.happyBounce {
+  animation: yippee 0.5s infinite;
+  animation-direction: alternate;
+}
+@keyframes yippee {
+  0% {
+    transform: translate(0,0);
+  }
+  100% {
+    transform: translate(0px, -28px);/*first value is x, second is y*/
+  }
+}
